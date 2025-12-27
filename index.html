@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:image" content="YOUR_BANNER_IMAGE_HERE.jpg">
+    <meta name="theme-color" content="#1e3a5f">
+    <title>Shivalay Infratech - Building Dreams Since 2012 | Premium Real Estate Indore</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #1e3a5f;
+            --secondary: #c9a961;
+            --accent: #2c5282;
+            --accent-dark: #b8860b;
+            --bg: #ffffff;
+            --text-dark: #1f2937;
+            --text-gray: #4a5568;
+            --card-radius: 20px;
+            --shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: #1a202c;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            touch-action: manipulation;
+        }
+
+        body.hindi {
+            font-family: "Noto Sans Devanagari", "Montserrat", sans-serif;
+        }
+
+        img, video {
+            max-width: 100%;
+            display: block;
+            pointer-events: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .fog-layer,
+        .fog-layer-right {
+            position: fixed;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.08;
+        }
+
+        .fog-layer { left: 0; }
+        .fog-layer-right { right: 0; transform: scaleX(-1); }
+
+        .fog-layer img,
+        .fog-layer-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: hue-rotate(280deg);
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-content {
+            background: linear-gradient(145deg, #f7fafc, #edf2f7);
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(30, 58, 95, 0.25);
+        }
+
+        .banner-section {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .banner-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .language-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+        }
+
+        .language {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 999px;
+            padding: 8px 18px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(30, 58, 95, 0.15);
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .language:active {
+            transform: scale(0.95);
+        }
+
+        .profile-section {
+            padding: 15px 20px 25px;
+            position: relative;
+            margin-top: -200px;
+            z-index: 2;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            background: transparent;
+            border: none;
+        }
+
+        .card-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 12px 32px rgba(30, 58, 95, 0.25);
+            overflow: hidden;
+            margin-top: -10px;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+        .profile-name h2 {
+            font-family: "Merriweather", serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: var(--primary);
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        body.hindi .profile-name h2 {
+            font-family: "Noto Sans Devanagari", serif;
+            font-size: 1.5rem;
+        }
+
+        .profile-name p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin: 4px 0;
+            font-weight: 400;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 16px;
+            padding: 18px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(30, 58, 95, 0.1);
+            border: 1px solid rgba(30, 58, 95, 0.08);
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        section {
+            padding: 35px 20px;
+            position: relative;
+        }
+
+        .section-heading h2 {
+            font-family: "Merriweather", serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 24px;
+            text-align: center;
+            position: relative;
+        }
+
+        body.hindi .section-heading h2 {
+            font-family: "Noto Sans Devanagari", serif;
+            font-size: 1.65rem;
+        }
+
+        .section-heading h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+
+        .social-media-section {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 25px 20px;
+        }
+
+        .social-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1e3a5f, #b8860b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-icon:active {
+            transform: scale(0.92);
+        }
+
+        .social-icon i {
+            font-size: 1.5rem;
+        }
+
+        .contact-box {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            margin-bottom: 16px;
+        }
+
+        .contact-box:active {
+            transform: scale(0.98);
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2c5282, #b8860b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-desc a {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            font-weight: 500;
+            word-break: break-word;
+        }
+
+        .projects-slider {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .project-card:active {
+            transform: scale(0.98);
+        }
+
+        .project-card .card-img {
+            width: 100%;
+            height: 200px;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+            margin-top: 0;
+        }
+
+        .project-card .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-card .card-body {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .project-card .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-family: "Merriweather", serif;
+        }
+
+        body.hindi .project-card .card-title {
+            font-family: "Noto Sans Devanagari", serif;
+        }
+
+        .project-price {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-dark);
+            margin-bottom: 12px;
+        }
+
+        .project-card .description-text {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .project-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .feature-badge {
+            background: rgba(0, 0, 0, 0.1);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .services-slider-view {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(30, 58, 95, 0.06);
+        }
+
+        .service-card:active {
+            transform: scale(0.98);
+        }
+
+        .service-card .card-img {
+            width: 100%;
+            height: 200px;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+            margin-top: 0;
+        }
+
+        .service-card .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .service-card .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .service-card .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-family: "Merriweather", serif;
+        }
+
+        body.hindi .service-card .card-title {
+            font-family: "Noto Sans Devanagari", serif;
+        }
+
+        .service-card .description-text {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        .product-slider {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-top: 24px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(30, 58, 95, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:active {
+            transform: scale(0.97);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 140px;
+            overflow: hidden;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-desc {
+            padding: 12px;
+        }
+
+        .product-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .testimonial-slider {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+            margin-top: 24px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 10px 26px rgba(30, 58, 95, 0.08);
+            border: 1px solid rgba(30, 58, 95, 0.04);
+            transition: all 0.3s ease;
+        }
+
+        .quote-img {
+            width: 36px;
+            height: 36px;
+            margin: 0 auto 16px;
+        }
+
+        .quote-img i {
+            font-size: 1.8rem;
+            color: #e5e7eb;
+        }
+
+        .testimonial-card .desc {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .profile-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            overflow: hidden;
+            border: 3px solid #c9a961;
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .title-text {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 100%;
+            margin: 24px auto 0;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.95);
+            transition: all 0.3s ease;
+            font-family: "Montserrat", sans-serif;
+            margin-bottom: 16px;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        body.hindi .form-control {
+            font-family: "Noto Sans Devanagari", sans-serif;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+            background: white;
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 999px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #1e3a5f, #b8860b);
+            color: white;
+            box-shadow: 0 8px 20px rgba(30, 58, 95, 0.25);
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        .map-section {
+            margin-top: 24px;
+        }
+
+        .map-location {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 14px 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            box-shadow: 0 6px 16px rgba(30, 58, 95, 0.08);
+        }
+
+        .location-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 280px;
+            border-radius: 16px;
+            border: none;
+            box-shadow: 0 12px 28px rgba(30, 58, 95, 0.12);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:active {
+            transform: scale(0.92);
+        }
+
+        .whatsapp-float i {
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 8px 32px rgba(37, 211, 102, 0.6); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 50%, #c9a961 100%);
+            padding: 35px 20px 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .footer-content {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .footer p {
+            font-size: 1rem;
+            margin-bottom: 12px;
+            line-height: 1.9;
+        }
+
+        .footer-contact {
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        .footer-contact p {
+            margin-bottom: 10px;
+        }
+
+        .footer-contact i {
+            margin-right: 6px;
+        }
+
+        .footer-hours {
+            font-size: 0.9rem;
+            margin-top: 12px;
+            opacity: 0.95;
+        }
+
+        .footer-credits {
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .footer-credits p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        .footer-credits a {
+            color: #fff;
+            font-weight: 800;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            font-size: 1.05rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-credits a:active {
+            color: #fef3c7;
+            transform: scale(0.98);
+        }
+
+        @media (min-width: 640px) {
+            .container {
+                max-width: 1080px;
+                margin: 20px auto;
+                padding: 16px;
+            }
+
+            .main-content {
+                border-radius: 28px;
+            }
+
+            .banner-section {
+                height: 340px;
+            }
+
+            .profile-section {
+                padding: 35px 30px;
+                margin-top: 0;
+            }
+
+            .card-img {
+                margin-top: 0;
+            }
+
+            .card {
+                flex-direction: row;
+                gap: 28px;
+            }
+
+            .card-body {
+                text-align: left;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .projects-slider {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .product-slider {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .banner-section {
+                height: 300px;
+            }
+
+            .projects-slider {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .services-slider-view {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .product-slider {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .testimonial-slider {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fog-layer">
+        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=1920&h=1080&fit=crop&blur=50" alt="">
+    </div>
+    <div class="fog-layer-right">
+        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=1920&h=1080&fit=crop&blur=50" alt="">
+    </div>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="banner-section">
+                <div class="banner-video">
+                    <video autoplay muted loop playsinline id="bannerVideo">
+                        <source src="vid.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="language-btn">
+                    <div class="language" onclick="toggleLanguage()">EN</div>
+                </div>
+            </div>
+
+            <section class="profile-section reveal">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="founder.jpg" alt="Shiv Malviya">
+                    </div>
+                    <div class="card-body">
+                        <div class="profile-name">
+                            <h2 data-en="Shivalay Infratech" data-hi="शिवालय इन्फ्राटेक">Shivalay Infratech</h2>
+                            <p data-en="Shiv Malviya - Founder & Owner" data-hi="शिव मालवीय - संस्थापक और स्वामी">Shiv Malviya - Founder & Owner</p>
+                            <p style="font-size: 0.85rem; margin-top: 6px; font-style: italic;" data-en="Building Dreams Since 2012" data-hi="2012 से सपनों का निर्माण">Building Dreams Since 2012</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number" data-en="13+" data-hi="13+">13+</span>
+                        <span class="stat-label" data-en="Years" data-hi="वर्ष">Years</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-en="25+" data-hi="25+">25+</span>
+                        <span class="stat-label" data-en="Projects" data-hi="परियोजनाएं">Projects</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-en="500+" data-hi="500+">500+</span>
+                        <span class="stat-label" data-en="Happy Families" data-hi="संतुष्ट परिवार">Happy Families</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-en="100%" data-hi="100%">100%</span>
+                        <span class="stat-label" data-en="RERA Approved" data-hi="रेरा स्वीकृत">RERA Approved</span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="social-media-section reveal">
+                <a href="https://shivalayinfratech.com/" target="_blank" rel="noopener">
+                    <div class="social-icon"><i class="fas fa-globe"></i></div>
+                </a>
+                <a href="mailto:shivalayinfratech@gmail.com" target="_blank" rel="noopener">
+                    <div class="social-icon"><i class="fas fa-envelope"></i></div>
+                </a>
+                <a href="https://wa.me/919589524809" target="_blank" rel="noopener">
+                    <div class="social-icon"><i class="fab fa-whatsapp"></i></div>
+                </a>
+                <a href="tel:+919691244851" target="_blank" rel="noopener">
+                    <div class="social-icon"><i class="fas fa-phone"></i></div>
+                </a>
+                <a href="https://maps.google.com/?q=Kanak+Smart+City+Indore" target="_blank" rel="noopener">
+                    <div class="social-icon"><i class="fas fa-map-marker-alt"></i></div>
+                </a>
+            </div>
+
+            <section class="contact-section reveal">
+                <div class="section-heading">
+                    <h2 data-en="Get In Touch" data-hi="संपर्क करें">Get In Touch</h2>
+                </div>
+                <div class="contact-box">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone" style="color: white; font-size: 1rem;"></i>
+                    </div>
+                    <div class="contact-desc">
+                        <a href="tel:+919589524809">+91 995895 24809</a>
+                    </div>
+                </div>
+                <div class="contact-box">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope" style="color: white; font-size: 1rem;"></i>
+                    </div>
+                    <div class="contact-desc">
+                        <a href="mailto:shivalayinfratech@gmail.com">shivalayinfratech@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-box">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt" style="color: white; font-size: 1rem;"></i>
+                    </div>
+                    <div class="contact-desc">
+                        <a href="https://maps.google.com/?q=Kanak+Smart+City+Indore" target="_blank" style="font-size: 0.85rem;" data-en="Kanak Smart City, Near Hanuman Mandir, Indore (M.P.)" data-hi="कनक स्मार्ट सिटी, हनुमान मंदिर के पास, इंदौर (म.प्र.)">Kanak Smart City, Near Hanuman Mandir, Indore (M.P.)</a>
+                    </div>
+                </div>
+                <div class="contact-box">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock" style="color: white; font-size: 1rem;"></i>
+                    </div>
+                    <div class="contact-desc">
+                        <a style="font-size: 0.85rem;" data-en="Mon - Sat: 10:00 AM - 7:00 PM" data-hi="सोम - शनि: सुबह 10:00 - शाम 7:00">Mon - Sat: 10:00 AM - 7:00 PM</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="projects-section reveal">
+                <div class="section-heading">
+                    <h2 data-en="Featured Projects" data-hi="प्रमुख परियोजनाएं">Featured Projects</h2>
+                </div>
+                <div class="projects-slider"><div class="project-card">
+                        <div class="card-img">
+                            <img src="Screenshot (124).png" alt="Shanti Vihar" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title" data-en="Shanti Vihar" data-hi="शांति विहार">Shanti Vihar</h3>
+                            <p class="description-text" data-en="Premium residential plots on Ujjain Road with double road access. Your dream home awaits in a peaceful eco-friendly community." data-hi="उज्जैन रोड पर डबल रोड एक्सेस के साथ प्रीमियम रेजिडेंशियल प्लॉट। एक शांतिपूर्ण इको-फ्रेंडली कम्युनिटी में आपका सपनों का घर।">Premium residential plots on Ujjain Road with double road access. Your dream home awaits in a peaceful eco-friendly community.</p>
+                            <div class="project-features">
+                                <span class="feature-badge" data-en="70% Loan" data-hi="70% ऋण">70% Loan</span>
+                                <span class="feature-badge" data-en="RERA Approved" data-hi="रेरा अनुमोदित">RERA Approved</span>
+                                <span class="feature-badge" data-en="Eco-Friendly" data-hi="इको-फ्रेंडली">Eco-Friendly</span>
+                            </div>
+                        </div>
+                    </div><div class="project-card">
+                        <div class="card-img">
+                            <img src="Screenshot (133).png" alt="Sankeshwar City" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title" data-en="Sankeshwar City" data-hi="संकेश्वर सिटी">Sankeshwar City</h3>
+                            <p class="description-text" data-en="Modern 2BHK to 3BHK apartments near Aurobindo Hospital. Features modular kitchen, gym, terrace garden with free registration & stamp duty." data-hi="औरोबिंदो अस्पताल के पास आधुनिक 2BHK से 3BHK अपार्टमेंट। मॉड्यूलर किचन, जिम, टैरेस गार्डन के साथ मुफ्त रजिस्ट्रेशन और स्टाम्प ड्यूटी।">Modern 2BHK to 3BHK apartments near Aurobindo Hospital. Features modular kitchen, gym, terrace garden with free registration & stamp duty.</p>
+                            <div class="project-features">
+                                <span class="feature-badge" data-en="2-3 BHK" data-hi="2-3 BHK">2-3 BHK</span>
+                                <span class="feature-badge" data-en="Free Registry" data-hi="मुफ्त रजिस्ट्री">Free Registry</span>
+                                <span class="feature-badge" data-en="Gymnasium" data-hi="व्यायामशाला">Gymnasium</span>
+                            </div>
+                        </div>
+                    </div><div class="project-card">
+                        <div class="card-img">
+                            <img src="Screenshot (132).png" alt="Orion Sky" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title" data-en="Orion Sky" data-hi="ओरियन स्काई">Orion Sky</h3>
+                            <p class="description-text" data-en="Affordable 1BHK apartments in Kanak Smart City. Ready possession with registry-free offer, just 5 minutes from Metro station." data-hi="कनक स्मार्ट सिटी में किफायती 1BHK अपार्टमेंट। रजिस्ट्री-फ्री ऑफर के साथ तैयार कब्जा, मेट्रो स्टेशन से सिर्फ 5 मिनट।">Affordable 1BHK apartments in Kanak Smart City. Ready possession with registry-free offer, just 5 minutes from Metro station.</p>
+                            <div class="project-features">
+                                <span class="feature-badge" data-en="1 BHK" data-hi="1 BHK">1 BHK</span>
+                                <span class="feature-badge" data-en="Ready Possession" data-hi="तुरंत कब्जा">Ready Possession</span>
+                                <span class="feature-badge" data-en="Near Metro" data-hi="मेट्रो के पास">Near Metro</span>
+                            </div>
+                        </div>
+                    </div></div>
+            </section>
+
+            <section class="our-services-section reveal">
+                <div class="section-heading">
+                    <h2 data-en="Our Expertise" data-hi="हमारी विशेषज्ञता">Our Expertise</h2>
+                </div>
+                <div class="services-slider-view">
+                    <div class="service-card">
+                        <div class="card-img">
+                            <img src="Screenshot (136).png" alt="Residential Projects" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title" data-en="Residential Projects" data-hi="आवासीय परियोजनाएं">Residential Projects</h3>
+                            <p class="description-text" data-en="From budget-friendly 1BHK apartments to luxurious 4BHK penthouses and independent villas. We create homes that match your lifestyle and dreams." data-hi="बजट-फ्रेंडली 1BHK अपार्टमेंट से लेकर लक्जरी 4BHK पेंटहाउस और स्वतंत्र विला तक। हम ऐसे घर बनाते हैं जो आपकी जीवनशैली और सपनों से मेल खाते हैं।">From budget-friendly 1BHK apartments to luxurious 4BHK penthouses and independent villas. We create homes that match your lifestyle and dreams.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="card-img">
+                            <img src="Screenshot (127).png" alt="Commercial Spaces" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title" data-en="Commercial Spaces" data-hi="वाणिज्यिक स्थान">Commercial Spaces</h3>
+                            <p class="description-text" data-en="Prime commercial plots and office spaces strategically located in Indore's business hubs. Perfect for retail, showrooms, and corporate offices." data-hi="इंदौर के बिजनेस हब में रणनीतिक रूप से स्थित प्रमुख वाणिज्यिक प्लॉट और कार्यालय स्थान। रिटेल, शोरूम और कॉर्पोरेट कार्यालयों के लिए एकदम सही।">Prime commercial plots and office spaces strategically located in Indore's business hubs. Perfect for retail, showrooms, and corporate offices.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="card-img">
+                            <img src="Screenshot (126).png" alt="Construction Services" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title" data-en="Construction Services" data-hi="निर्माण सेवाएं">Construction Services</h3>
+                            <p class="description-text" data-en="End-to-end custom construction with premium materials and modern designs. From foundation to finishing, we deliver excellence at every stage." data-hi="प्रीमियम सामग्री और आधुनिक डिजाइन के साथ एंड-टू-एंड कस्टम निर्माण। नींव से फिनिशिंग तक, हम हर चरण में उत्कृष्टता प्रदान करते हैं।">End-to-end custom construction with premium materials and modern designs. From foundation to finishing, we deliver excellence at every stage.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="card-img">
+                            <img src="office.jpg" alt="Documentation & RERA" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title" data-en="Legal & RERA Compliance" data-hi="कानूनी और रेरा अनुपालन">Legal & RERA Compliance</h3>
+                            <p class="description-text" data-en="Complete property documentation support with 100% RERA compliance. We handle all legal formalities ensuring transparent and hassle-free transactions." data-hi="100% रेरा अनुपालन के साथ पूर्ण संपत्ति दस्तावेज़ीकरण सहायता। हम सभी कानूनी औपचारिकताओं को संभालते हैं जिससे पारदर्शी और परेशानी मुक्त लेनदेन सुनिश्चित होता है।">Complete property documentation support with 100% RERA compliance. We handle all legal formalities ensuring transparent and hassle-free transactions.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+          
+            <section class="testimonial-section reveal">
+                <div class="section-heading">
+                    <h2 data-en="What Our Clients Say" data-hi="हमारे ग्राहक क्या कहते हैं">What Our Clients Say</h2>
+                </div>
+                <div class="testimonial-slider">                    <div class="testimonial-card">
+                        <div class="quote-img">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="desc" data-en="My experience with Shivalay Infratech in buying property in Indore has been wonderful. The entire dealing was very clear and honest. I would definitely recommend this company to others." data-hi="इंदौर में प्रॉपर्टी लेने में मेरे लिए एक शानदार अनुभव रहा है शिवालय इंफ्राटेक के साथ यहां मेरी पूरी डिलिंग बहुत ही क्लियर और ईमानदारी से हुई है में इस कंपनी को दूसरे को भी जरूर रिकमेंडेड करूंगी">इंदौर में प्रॉपर्टी लेने में मेरे लिए एक शानदार अनुभव रहा है शिवालय इंफ्राटेक के साथ यहां मेरी पूरी डिलिंग बहुत ही क्लियर और ईमानदारी से हुई है में इस कंपनी को दूसरे को भी जरूर रिकमेंडेड करूंगी</p>
+                        <div class="profile-img">
+                            <img src="https://ui-avatars.com/api/?name=Chetna+Rajput&background=1e3a5f&color=fff&size=120" alt="Chetna Rajput">
+                        </div>
+                        <p class="title-text" data-en="Chetna Rajput" data-hi="चेतना राजपूत">Chetna Rajput</p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="quote-img">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="desc" data-en="The atmosphere here is very good. The team works honestly and understands customer needs. A very trustworthy company for real estate." data-hi="यहां का माहौल बहुत अच्छा है टीम ईमानदारी से काम करती है और ग्राहक की जरूरत को समझती है बहुत भरोसेमंद कंपनी है रियल एस्टेट के लिए">यहां का माहौल बहुत अच्छा है टीम ईमानदारी से काम करती है और ग्राहक की जरूरत को समझती है बहुत भरोसेमंद कंपनी है रियल एस्टेट के लिए</p>
+                        <div class="profile-img">
+                            <img src="https://ui-avatars.com/api/?name=Gaurav+Singh&background=c9a961&color=fff&size=120" alt="Gaurav Singh">
+                        </div>
+                        <p class="title-text" data-en="Gaurav Singh" data-hi="गौरव सिंह">Gaurav Singh</p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="quote-img">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="desc" data-en="Both the quality and location of the property are excellent. What was promised was delivered. Shivalay Infratech is a very good company in this field 👍" data-hi="प्रॉपर्टी की क्वालिटी और लोकेशन दोनों बेहतरीन है जो वादा किया गया था वही डिलीवर किया शिवालय इंफ्राटेक बहुत ही अच्छी कंपनी है इस फील्ड में👍🏼">प्रॉपर्टी की क्वालिटी और लोकेशन दोनों बेहतरीन है जो वादा किया गया था वही डिलीवर किया शिवालय इंफ्राटेक बहुत ही अच्छी कंपनी है इस फील्ड में👍🏼</p>
+                        <div class="profile-img">
+                            <img src="https://ui-avatars.com/api/?name=Rajkumari+Singh&background=2c5282&color=fff&size=120" alt="Rajkumari Singh">
+                        </div>
+                        <p class="title-text" data-en="Rajkumari Singh" data-hi="राजकुमारी सिंह">Rajkumari Singh</p>
+                    </div></div>
+            </section>
+
+            <section class="contact-us-section reveal">
+                <div class="section-heading">
+                    <h2 data-en="Book Your Dream Property" data-hi="अपनी ड्रीम प्रॉपर्टी बुक करें">Book Your Dream Property</h2>
+                </div>
+                <div class="contact-form">
+                    <form id="enquiryForm">
+                        <input type="text" class="form-control" placeholder="Your Name" data-placeholder-en="Your Name" data-placeholder-hi="आपका नाम" name="name" required>
+                        <input type="tel" class="form-control" placeholder="Mobile Number" data-placeholder-en="Mobile Number" data-placeholder-hi="मोबाइल नंबर" name="phone" pattern="[0-9]{10}" required>
+                        <input type="email" class="form-control" placeholder="Email Address" data-placeholder-en="Email Address" data-placeholder-hi="ईमेल पता" name="email">
+                        <select class="form-control" name="service" required>
+                            <option value="" data-en="Select Property Type" data-hi="संपत्ति प्रकार चुनें">Select Property Type</option>
+                            <option value="1bhk" data-en="1 BHK Apartment" data-hi="1 BHK अपार्टमेंट">1 BHK Apartment</option>
+                            <option value="2bhk" data-en="2 BHK Apartment" data-hi="2 BHK अपार्टमेंट">2 BHK Apartment</option>
+                            <option value="3bhk" data-en="3 BHK Apartment" data-hi="3 BHK अपार्टमेंट">3 BHK Apartment</option>
+                            <option value="4bhk" data-en="4 BHK Apartment" data-hi="4 BHK अपार्टमेंट">4 BHK Apartment</option>
+                            <option value="villa" data-en="Independent Villa" data-hi="स्वतंत्र विला">Independent Villa</option>
+                            <option value="plot" data-en="Residential Plot" data-hi="रेजिडेंशियल प्लॉट">Residential Plot</option>
+                            <option value="commercial" data-en="Commercial Space" data-hi="कमर्शियल स्पेस">Commercial Space</option>
+                            <option value="construction" data-en="Construction Services" data-hi="निर्माण सेवाएं">Construction Services</option>
+                        </select>
+                        <textarea class="form-control" placeholder="Your Requirements & Budget..." data-placeholder-en="Your Requirements & Budget..." data-placeholder-hi="आपकी आवश्यकताएं और बजट..." name="message" rows="4"></textarea>
+                        <button type="submit" class="btn">
+                            <span data-en="Get Instant Quote on WhatsApp" data-hi="व्हाट्सएप पर तुरंत कोटेशन पाएं">Get Instant Quote on WhatsApp</span>
+                            <i class="fab fa-whatsapp"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="map-section reveal">
+                <div class="section-heading">
+                    <h2 data-en="Visit Our Office" data-hi="हमारे कार्यालय में आएं">Visit Our Office</h2>
+                </div>
+                <div class="map-location">
+                    <div class="location-icon">
+                        <i class="fas fa-map-marker-alt" style="color: white; font-size: 1rem;"></i>
+                    </div>
+                    <span style="color: var(--text-dark); font-weight: 500; font-size: 0.9rem;" data-en="Kanak Smart City, Near Hanuman Mandir, Indore" data-hi="कनक स्मार्ट सिटी, हनुमान मंदिर के पास, इंदौर">Kanak Smart City, Near Hanuman Mandir, Indore</span>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.1902903858618!2d75.85540057434397!3d22.795411824768998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39630392124f6da5%3A0x78db1e9236c2b55c!2sSHIVALAY%20INFRATECH!5e0!3m2!1sen!2sin!4v1766831385761!5m2!1sen!2sin" width="100%" height="280" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+
+            <div class="footer">
+                <div class="footer-content">
+                    <p><strong>Shivalay Infratech</strong></p>
+                    <p data-en="Building Dreams Since 2012" data-hi="2012 से सपनों का निर्माण">Building Dreams Since 2012</p>
+                    <p data-en="100% RERA Approved Projects" data-hi="100% रेरा अनुमोदित परियोजनाएं">100% RERA Approved Projects</p>
+
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> +91 96912 44851</p>
+                        <p><i class="fas fa-envelope"></i> info@shivalayinfratech.com</p>
+                    </div>
+
+                    <p class="footer-hours" data-en="Mon - Sat: 10:00 AM - 7:00 PM" data-hi="सोम - शनि: सुबह 10:00 - शाम 7:00">Mon - Sat: 10:00 AM - 7:00 PM</p>
+
+                    <div class="footer-credits">
+                        <p data-en="Made by <a href='https://raweditt.com' target='_blank' rel='noopener'>Raweditt</a> in collaboration with <a href='https://semicolon.online' target='_blank' rel='noopener'>Semicolon</a>" data-hi="❤️ के साथ <a href='https://raweditt.com' target='_blank' rel='noopener'>Raweditt</a> द्वारा <a href='https://semicolon.online' target='_blank' rel='noopener'>Semicolon</a> के सहयोग से निर्मित">Made with ❤️ by <a href="https://raweditt.com" target="_blank" rel="noopener">Raweditt</a> in collaboration with <a href="https://semicolon.online" target="_blank" rel="noopener">Semicolon</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/919589524809?text=नमस्ते%20शिव%20सर,%20मुझे%20Shivalay%20Infratech%20की%20प्रॉपर्टी%20में%20रुचि%20है" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp Contact">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            const langBtn = document.querySelector('.language');
+            const body = document.body;
+
+            currentLang = currentLang === 'en' ? 'hi' : 'en';
+            langBtn.textContent = currentLang.toUpperCase();
+
+            if (currentLang === 'hi') {
+                body.classList.add('hindi');
+            } else {
+                body.classList.remove('hindi');
+            }
+
+            const elementsToTranslate = document.querySelectorAll('[data-en][data-hi]');
+
+            elementsToTranslate.forEach(element => {
+                const text = element.getAttribute(`data-${currentLang}`);
+
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = text;
+                } else if (element.tagName === 'OPTION') {
+                    element.textContent = text;
+                } else {
+                    element.innerHTML = text;
+                }
+            });
+
+            const placeholderElements = document.querySelectorAll('[data-placeholder-en][data-placeholder-hi]');
+            placeholderElements.forEach(element => {
+                element.placeholder = element.getAttribute(`data-placeholder-${currentLang}`);
+            });
+        }
+
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(element => {
+            revealObserver.observe(element);
+        });
+
+        document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = this.name.value;
+            const phone = this.phone.value;
+            const email = this.email.value;
+            const service = this.service.options[this.service.selectedIndex].text;
+            const message = this.message.value;
+
+            const whatsappMessage = `नमस्ते! मैं ${name} हूं।%0A%0A📱 Mobile: ${phone}%0A📧 Email: ${email}%0A🏠 Interested In: ${service}%0A%0A✍️ Requirements:%0A${message}%0A%0A- From Shivalay Infratech Website`;
+
+            window.open(`https://wa.me/919589524809?text=${whatsappMessage}`, '_blank');
+        });
+
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                revealElements.forEach(element => {
+                    if (element.getBoundingClientRect().top < window.innerHeight) {
+                        element.classList.add('visible');
+                    }
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>
